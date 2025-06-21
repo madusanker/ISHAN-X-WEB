@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
   async function RobinPair() {
     const { state, saveCreds } = await useMultiFileAuthState(`./session`);
     try {
-      let ishanPairWeb = makeWASocket({
+      let robinPairWeb = makeWASocket({
         auth: {
           creds: state.creds,
           keys: makeCacheableSignalKeyStore(
